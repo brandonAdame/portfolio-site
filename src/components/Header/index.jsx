@@ -1,5 +1,5 @@
-import Typewriter from "typewriter-effect";
-import darkmode from "../../assets/darkmode.svg";
+import { MoonIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
 
 const Header = (props) => {
   const { isDark, setIsDark } = props;
@@ -12,7 +12,12 @@ const Header = (props) => {
         </div>
         <div className="flex items-center">
           <button className="mr-5" onClick={() => setIsDark(!isDark)}>
-            <img src={darkmode} alt="" />
+            <MoonIcon
+              className={clsx(
+                "size-6",
+                !isDark ? " text-blue-gray-300-500" : "text-white"
+              )}
+            />
           </button>
 
           <button className="bg-blue-600/80 text-white text-2xl px-4 rounded-lg">

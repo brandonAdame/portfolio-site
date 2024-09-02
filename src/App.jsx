@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className={clsx(isDark ? "dark" : "")}>
-      <div className="dark:bg-slate-500 ">
+      <div className="dark:bg-scooter-800">
         <section>
           <div className="">
             <Header isDark={isDark} setIsDark={setIsDark} />

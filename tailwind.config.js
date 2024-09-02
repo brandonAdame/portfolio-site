@@ -1,13 +1,79 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  darkMode: 'class',
-  plugins: [],
-}
+const withMT = require("@material-tailwind/react/utils/withMT");
 
+module.exports = withMT({
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        calypso: {
+          50: "#e8ffff",
+          100: "#c5ffff",
+          200: "#92ffff",
+          300: "#47fffe",
+          400: "#00f5ff",
+          500: "#00d7ff",
+          600: "#00a9d7",
+          700: "#0085ac",
+          800: "#006e90",
+          900: "#055674",
+          950: "#003951",
+        },
+        "carrot-orange": {
+          50: "#fffaea",
+          100: "#fff2c5",
+          200: "#ffe586",
+          300: "#ffd046",
+          400: "#ffbb1c",
+          500: "#f18f01",
+          600: "#e17000",
+          700: "#bb4b02",
+          800: "#973a09",
+          900: "#7c300b",
+          950: "#481600",
+        },
+        "jungle-mist": {
+          50: "#f5f8fa",
+          100: "#eaf0f4",
+          200: "#d0e0e7",
+          300: "#adcad6",
+          400: "#76a7ba",
+          500: "#558ca2",
+          600: "#427187",
+          700: "#365c6e",
+          800: "#304e5c",
+          900: "#2c434e",
+          950: "#1d2c34",
+        },
+        atlantis: {
+          50: "#f5faeb",
+          100: "#eaf3d4",
+          200: "#d6e8ae",
+          300: "#bad87e",
+          400: "#99c24d",
+          500: "#80aa38",
+          600: "#638729",
+          700: "#4c6823",
+          800: "#3e5321",
+          900: "#364720",
+          950: "#1b260d",
+        },
+        scooter: {
+          50: "#eefbfd",
+          100: "#d4f4f9",
+          200: "#afe7f2",
+          300: "#77d5e9",
+          400: "#41bbd9",
+          500: "#1d9cbd",
+          600: "#1b7c9f",
+          700: "#1c6582",
+          800: "#20536a",
+          900: "#1f465a",
+          950: "#0f2d3d",
+        },
+      },
+    },
+  },
+  darkMode: "class",
+  plugins: [],
+});
